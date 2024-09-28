@@ -5,7 +5,6 @@ import requests, os, uuid, json
 from dotenv import load_dotenv
 load_dotenv()
 
-
 app = Flask(__name__) # app will be our core application. We'll use it when we register our routes in the next step.
 
 # By using @app.route, we indicate the route we want to create.
@@ -16,6 +15,7 @@ def index():
 
 @app.route('/', methods=['POST'])
 def index_post():
+
 	#Reads the values from the form
 	original_text = request.form['text']
 	target_language = request.form['language']
